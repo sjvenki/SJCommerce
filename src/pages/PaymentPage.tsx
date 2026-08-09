@@ -279,7 +279,7 @@ export default function PaymentPage({ cartTotal, cart, onBack, onSuccess }: Prop
                       <div className="text-xs" style={{ color: '#4ade8060' }}>×{item.qty}</div>
                     </div>
                     <span className="text-xs font-bold flex-none" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>
-                      ${(item.price * item.qty).toFixed(2)}
+                      ₹{(item.price * item.qty).toFixed(2)}
                     </span>
                   </div>
                 ))}
@@ -288,18 +288,18 @@ export default function PaymentPage({ cartTotal, cart, onBack, onSuccess }: Prop
               <div className="border-t pt-4 space-y-2" style={{ borderColor: '#22c55e20' }}>
                 <div className="flex justify-between text-sm">
                   <span style={{ color: '#4ade8080' }}>Subtotal</span>
-                  <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>${cartTotal.toFixed(2)}</span>
+                  <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>₹{cartTotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span style={{ color: '#4ade8080' }}>Delivery</span>
                   {delivery === 0
                     ? <span style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>FREE</span>
-                    : <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>${delivery.toFixed(2)}</span>
+                    : <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>₹{delivery.toFixed(2)}</span>
                   }
                 </div>
                 <div className="flex justify-between font-black pt-2 border-t" style={{ borderColor: '#22c55e20' }}>
                   <span style={{ color: '#f0fdf4' }}>Total</span>
-                  <span className="text-xl" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>${total.toFixed(2)}</span>
+                  <span className="text-xl" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>₹{total.toFixed(2)}</span>
                 </div>
               </div>
 
@@ -315,7 +315,7 @@ export default function PaymentPage({ cartTotal, cart, onBack, onSuccess }: Prop
                     Processing…
                   </div>
                 ) : (
-                  `Pay $${total.toFixed(2)}`
+                  `Pay ₹${total.toFixed(2)}`
                 )}
               </button>
 

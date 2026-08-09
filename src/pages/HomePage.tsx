@@ -287,11 +287,11 @@ export default function HomePage({ cart, cartCount, onAddToCart, onGoCart }: Pro
                     <div className="flex items-center justify-between mt-auto">
                       <div>
                         <span className="font-black text-base" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>
-                          ${product.price.toFixed(2)}
+                          ₹{product.price.toFixed(2)}
                         </span>
                         {product.originalPrice && (
                           <span className="ml-1 text-xs line-through" style={{ color: '#4ade8040' }}>
-                            ${product.originalPrice.toFixed(2)}
+                            ₹{product.originalPrice.toFixed(2)}
                           </span>
                         )}
                       </div>
@@ -326,7 +326,7 @@ export default function HomePage({ cart, cartCount, onAddToCart, onGoCart }: Pro
             <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center text-sm font-bold">{cartCount}</span>
             View Cart
             <span className="font-black" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-              ${cart.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2)}
+              ₹{cart.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2)}
             </span>
           </button>
         </div>

@@ -94,7 +94,7 @@ export default function CartPage({ cart, cartTotal, onUpdateQty, onRemoveItem, o
                       </div>
                       <div className="flex items-center gap-3">
                         <span className="font-black text-base" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>
-                          ${(item.price * item.qty).toFixed(2)}
+                          ₹{(item.price * item.qty).toFixed(2)}
                         </span>
                         <button
                           onClick={() => onRemoveItem(item.id)}
@@ -133,23 +133,23 @@ export default function CartPage({ cart, cartTotal, onUpdateQty, onRemoveItem, o
                 <div className="space-y-3 mb-5">
                   <div className="flex justify-between text-sm">
                     <span style={{ color: '#4ade8080' }}>Subtotal ({cart.reduce((s, i) => s + i.qty, 0)} items)</span>
-                    <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>${subtotal.toFixed(2)}</span>
+                    <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>₹{subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span style={{ color: '#4ade8080' }}>Delivery fee</span>
                     {delivery === 0
                       ? <span className="font-semibold" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>FREE</span>
-                      : <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>${delivery.toFixed(2)}</span>
+                      : <span style={{ color: '#f0fdf4', fontFamily: "'JetBrains Mono', monospace" }}>₹{delivery.toFixed(2)}</span>
                     }
                   </div>
                   {delivery > 0 && (
                     <div className="text-xs px-3 py-2 rounded-lg" style={{ backgroundColor: '#22c55e15', color: '#4ade80' }}>
-                      Add ${(30 - subtotal).toFixed(2)} more for free delivery
+                      Add ₹{(30 - subtotal).toFixed(2)} more for free delivery
                     </div>
                   )}
                   <div className="border-t pt-3 flex justify-between" style={{ borderColor: '#22c55e20' }}>
                     <span className="font-bold" style={{ color: '#f0fdf4' }}>Total</span>
-                    <span className="font-black text-lg" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>${total.toFixed(2)}</span>
+                    <span className="font-black text-lg" style={{ color: '#22c55e', fontFamily: "'JetBrains Mono', monospace" }}>₹{total.toFixed(2)}</span>
                   </div>
                 </div>
 
