@@ -71,8 +71,8 @@ export default function HomePage({ cart, cartCount, onAddToCart, onGoCart }: Pro
             <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#22c55e' }}>
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M3 6h19l-2 9H5L3 6z" stroke="#052e16" strokeWidth="2" strokeLinejoin="round"/><circle cx="9" cy="20" r="1.5" fill="#052e16"/><circle cx="17" cy="20" r="1.5" fill="#052e16"/><path d="M1 2h3l.5 2" stroke="#052e16" strokeWidth="2" strokeLinecap="round"/></svg>
             </div>
-            <span className="text-xl font-bold tracking-tight" style={{ color: '#f0fdf4' }}>
-              SJ<span style={{ color: '#22c55e' }}>Commerce</span>
+            <span className="text-xl font-bold tracking-tight" style={{ color: '#3b82f6' }}>
+              Shop Groceries
             </span>
           </div>
 

@@ -27,7 +27,7 @@ export default function CartPage({ cart, cartTotal, onUpdateQty, onRemoveItem, o
             <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#22c55e' }}>
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M3 6h19l-2 9H5L3 6z" stroke="#052e16" strokeWidth="2" strokeLinejoin="round"/><circle cx="9" cy="20" r="1.5" fill="#052e16"/><circle cx="17" cy="20" r="1.5" fill="#052e16"/></svg>
             </div>
-            <span className="font-bold" style={{ color: '#f0fdf4' }}>SJ<span style={{ color: '#22c55e' }}>Commerce</span></span>
+            <span className="font-bold" style={{ color: '#3b82f6' }}>Shop Groceries</span>
           </div>
           <div className="w-24" />
         </div>
